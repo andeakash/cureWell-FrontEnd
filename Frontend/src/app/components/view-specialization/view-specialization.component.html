@@ -1,0 +1,26 @@
+<br>
+<br>
+
+<div class="container">
+    <div class="{{ alertClass}}" role="alert">
+        {{textMessage}}
+    </div>
+    <h1 class="text-center"> View Specialization </h1>
+    <table class="table center table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Specialization Code</th>
+                <th>Specialization Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let specialization of specializations">
+                <th>{{specialization.SpecializationCode}}</th>
+                <th>{{specialization.SpecializationName}}</th>
+                <th>
+                    <button class="btn btn-primary" (click)="viewDoctor(specialization)">View Doctors</button>
+                </th>
+            </tr>
+        </tbody>
+    </table>

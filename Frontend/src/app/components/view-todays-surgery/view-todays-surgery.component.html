@@ -1,0 +1,40 @@
+<br>
+
+
+
+<br>
+
+<div class="container">
+    <div class="{{ alertClass}}" role="alert">
+        {{textMessage}}
+    </div>
+
+    <h1 class="text-center"> View specialization </h1>
+
+    <table border="1" class="table center">
+        <thead class="thead thead-dark">
+            <tr>
+                <th>Surgery Id</th>
+                <th>Doctor Id</th>
+                <th>Surgery Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Surgery Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let surgery of surgeries">
+                <td>{{surgery.SurgeryId}}</td>
+                <td>{{surgery.DoctorId}}</td>
+                <td>{{surgery.SurgeryDate}}</td>
+                <td>{{surgery.StartTime}}</td>
+                <td>{{surgery.EndTime}}</td>
+                <td>{{surgery.SurgeryCategory}}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="editSurgery(surgery)">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
